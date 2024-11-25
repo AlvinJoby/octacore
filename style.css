@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  position: fixed;
+  top: -70px; /* Initially hide the navbar above the screen */
+  left: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  background: #13111c;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+  animation: slideDown 1.5s forwards; /* Slide down animation */
+}
+
+@keyframes slideDown {
+  0% {
+    top: -70px;
+  }
+  100% {
+    top: 0;
+  }
+}
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  font-family: "Edu AU VIC WA NT Pre", cursive;
+  text-transform: uppercase;
+}
+
+nav .cta-btn {
+  color: #fff;
+  background: #13111c;
+  padding: 10px 20px;
+  border: 3px solid rgb(211, 111, 211);
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+nav .cta-btn:hover {
+  background: rgb(211, 111, 211);
+  color: #13111c;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 0 20px;
+  }
+  nav .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    padding: 15px 20px;
+  }
+  nav .nav-links.active {
+    display: flex;
+  }
+}
+.face1 {
+  height: 99vh;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #13111c;
+  overflow: hidden;
+  border-bottom-left-radius: 70px;
+  border-bottom-right-radius: 70px;
+}
+.f1head {
+  text-align: center;
+  display: flex;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 150px;
+  overflow: hidden;
+}
+.f1head h1 {
+  overflow: hidden;
+  font-family: "Londrina Outline", sans-serif;
+  color: white;
+  height: auto;
+  font-size: 3em;
+  letter-spacing: 9px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp 2s forwards;
+}
+.f1tail h1 {
+  font-size: 20px;
+  font-family: "Montserrat Alternates", serif;
+  color: white;
+}
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.face2 {
+  margin-top: 75px;
+  width: 100%;
+  height: auto;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.divF2 {
+  width: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  font-family: "Quicksand", serif;
+  color: #333;
+  text-align: center;
+  font-size: 1em;
+  margin-bottom: 60px;
+}
+.underline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.underline div {
+  background-color: black;
+  width: 100px;
+  height: 3px;
+}
+.team-container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1400px;
+  padding: 20px;
+  height: auto;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-content h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: #777;
+  margin-top: 5px;
+}
+
+.card-content .social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #0077cc;
+}
+#menpic {
+  height: 250px;
+}
+.contact {
+  background-color: #13111c;
+  margin-top: 20px;
+  display: grid;
+  width: 100%;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+}
+.Chead1 {
+  font-size: 1.5em;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  font-family: "Nabla", serif;
+}
+.icons a {
+  background: #ecf0f3;
+  position: relative;
+  height: 60px;
+  width: 60px;
+  margin: 0 10px;
+  display: inline-flex;
+  text-decoration: none;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+.icons a:hover:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  background: #ecf0f3;
+  box-shadow: inset -3px -3px 7px #ffffff, inset 3px 3px 5px #ceced1;
+}
+.icons a i {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  font-size: 25px;
+  line-height: 60px;
+}
+.icons a:hover i {
+  transform: scale(0.9);
+}
+.icons a.fb i {
+  color: #4267b2;
+}
+.icons a.twitter i {
+  color: #1da1f2;
+}
+.icons a.insta i {
+  color: #e1306c;
+}
+.icons a.git i {
+  color: #333;
+}
+.icons a.yt i {
+  color: #ff0000;
+}
