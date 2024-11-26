@@ -34,7 +34,7 @@ const countingTextElement = document.getElementById('countingText');
 const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            animateScore(scoreElement, 0, 4000, 6000, countingTextElement); // 0 to 4000+ in 3 seconds
+            animateScore(scoreElement, 0, 11000, 6000, countingTextElement); // 0 to 4000+ in 3 seconds
             observer.disconnect(); // Stop observing after animation starts
         }
     });
